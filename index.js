@@ -2,8 +2,10 @@ const express = require("express");
 const dotenv = require("dotenv");
 const routes = require("./routes");
 const { sequelize, initModels } = require("./models");
+const cors = require("cors");
 
 dotenv.config();
+app.use(cors());
 
 const app = express();
 app.use(express.json());
