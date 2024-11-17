@@ -1,18 +1,14 @@
 # Mini ATM API
 
-Mini ATM API adalah aplikasi backend untuk sistem ATM sederhana yang memungkinkan pengguna melakukan **login**, **registrasi**, **penarikan**, **penyetoran**, dan melihat **riwayat transaksi**. Dibangun menggunakan **Node.js**, **Express.js**, dan **Sequelize** dengan database **MySQL**.
-
 ---
 
 ## Fitur
 
-- **Authentication**: Login dan registrasi menggunakan JWT.
-- **Deposit**: Menambahkan saldo ke akun pengguna.
-- **Withdraw**: Penarikan saldo dengan aturan:
-  - Hanya dalam kelipatan Rp50.000.
-  - Tidak boleh kurang dari saldo minimum Rp50.000 setelah penarikan.
-- **Transaction History**: Riwayat lengkap transaksi pengguna.
-- **Token Validation**: Validasi token JWT untuk keamanan dan akses terautentikasi.
+- **Authentication**
+- **Deposit**
+- **Withdraw**
+- **Transaction History**
+- **Token Validation**
 
 ---
 
@@ -30,17 +26,17 @@ Mini ATM API adalah aplikasi backend untuk sistem ATM sederhana yang memungkinka
 
 Pastikan Anda memiliki perangkat berikut terinstal di sistem Anda:
 
-- **Node.js** (v14 atau lebih baru)
-- **NPM** (v6 atau lebih baru)
-- **MySQL** (server atau remote database)
+- **Node.js**
+- **NPM**
+- **MySQL** (server or remote database)
 
 ---
 
-## Cara Menjalankan Proyek
+## How to run
 
 ### 1. Clone Repository
 
-Clone repository ke lokal Anda:
+Clone repository:
 
 ```bash
 git clone https://github.com/username/mini-atm-api.git
@@ -49,9 +45,26 @@ cd mini-atm-api
 npm install
 ```
 
-### 2. Running
+### 2. Setup enviroment
 
-Clone repository ke lokal Anda:
+copy - paste .env.sample into .env
+
+```bash
+# Port Server
+PORT=5000
+
+# Secret untuk JWT
+JWT_SECRET=your_jwt_secret_key
+
+# Konfigurasi Database
+DATABASE_HOST=your_database_host
+DATABASE_PORT=3306
+DATABASE_USER=your_database_user
+DATABASE_PASSWORD=your_database_password
+DATABASE_NAME=your_database_name
+```
+
+### 3. Running Project
 
 development
 
@@ -64,3 +77,9 @@ production
 ```bash
 npm start
 ```
+
+### 4. API Documentation
+
+- **POSTMAN**: [Postman](https://www.postman.com/han888-9503/public/collection/10283566-c3accf3d-2e59-4da4-8325-dd77b81fbe03?action=share&creator=10283566&active-environment=10283566-b22987a4-e880-46a7-b6b9-b4dab7d21283)
+
+### by Farhan Aziz F
